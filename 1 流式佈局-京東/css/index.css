@@ -3,17 +3,50 @@ body {
   min-width: 320px;
   max-width: 640px;
   margin: 0 auto;
+  background-color: #f6f6f6;
   font-family: -apple-system, Helvetica, sans-serif;
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-
-  background-color: #ccc;
+}
+a {
+  color: #666;
+  text-decoration: none;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+/* 去掉图片的空白缝隙 */
+img {
+  vertical-align: middle;
+}
+/* 移动端特殊样式 */
+* {
+  /*清除點擊（比如連接的）高亮，設置為transparent 透明*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  /*去掉ios端默認的屬性，然後才能自定義按鈕和輸入框樣式*/
+  -webkit-appearance: none;
+}
+/*禁用長按頁面時的彈出菜單*/
+img,
+a {
+  -webkit-touch-callout: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
 }
 .app {
   height: 45px;
@@ -118,4 +151,139 @@ ul {
 }
 .slider img {
   width: 100%;
+}
+.brand {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.brand div {
+  float: left;
+  width: 33.33%;
+}
+.brand div img {
+  width: 100%;
+}
+nav {
+  padding-top: 5px;
+}
+nav a {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+nav a img {
+  width: 40px;
+  margin: 10px 0;
+}
+nav a span {
+  display: block;
+}
+.news {
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.news a {
+  float: left;
+  box-sizing: border-box;
+}
+.news a img {
+  width: 100%;
+}
+.news a:nth-child(1) {
+  width: 50%;
+}
+.news a:nth-child(n + 2) {
+  width: 25%;
+  border-left: 1px solid #ccc;
+}
+.recommendations {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.recommendations-top div {
+  float: left;
+  width: 50%;
+  padding: 5px 0 0 5px;
+  box-sizing: border-box;
+}
+.recommendations-top span,
+.recommendations-bottom span {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.recommendations-top p,
+.recommendations-bottom p {
+  margin: 5px 0;
+  font-size: 0.4rem;
+}
+.recommendations-top a:nth-child(n + 3) {
+  float: left;
+  width: 50%;
+  padding-left: 5%;
+  box-sizing: border-box;
+}
+.recommendations-top img {
+  width: 70%;
+}
+.recommendations-bottom {
+  width: 100%;
+  margin-top: 10px;
+}
+.recommendations-bottom div {
+  float: left;
+  width: 25%;
+  padding: 5px 0 0 5px;
+  box-sizing: border-box;
+}
+.recommendations-bottom div a {
+  width: 100%;
+}
+.recommendations-bottom div a img {
+  width: 70%;
+}
+.line {
+  margin: 10px 0;
+  width: 100%;
+  border-top: 1px solid #dedede;
+}
+footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.footer-top div {
+  float: left;
+  width: 25%;
+}
+.footer-top div a {
+  display: block;
+  width: 100%;
+  border-right: 1px solid #dedede;
+  box-sizing: border-box;
+}
+.footer-top div:last-child a {
+  border-right: none;
+}
+.footer-bottom {
+  width: 100%;
+  margin-top: 20px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.footer-bottom a {
+  float: left;
+  width: 33.33%;
+}
+.footer-bottom a img {
+  width: 50%;
 }
