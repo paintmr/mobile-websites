@@ -1,0 +1,123 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+div {
+  box-sizing: border-box;
+}
+/* 搜索模块用固定定位 */
+.search-index {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  /* 固定定位的盒子应该有宽度 */
+  width: 100%;
+  /* 固定定位跟父级没有关系 它以屏幕为准，所以要再写一次最大宽度和最小宽度 */
+  max-width: 540px;
+  min-width: 320px;
+  height: 44px;
+  background-color: #f6f6f6;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.search {
+  position: relative;
+  height: 26px;
+  border: 1px solid #ccc;
+  margin: 7px 10px;
+  padding-left: 25px;
+  color: #666;
+  font-size: 12px;
+  line-height: 24px;
+  border-radius: 5px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.search::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+}
+.user {
+  width: 44px;
+  height: 44px;
+  font-size: 12px;
+  text-align: center;
+  color: #2eaaa0;
+}
+.user::before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 3px auto -2px;
+}
+/* banner */
+.banner {
+  padding-top: 44px;
+}
+.banner img {
+  width: 100%;
+}
+/* 第一个导航栏 */
+.nav-first {
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  margin: 3px 4px;
+  border-radius: 8px;
+}
+.nav-first li {
+  flex: 1;
+}
+.nav-first a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.nav-first li [class^="nav-first-icon"] {
+  width: 32px;
+  height: 32px;
+  margin-top: 8px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+.nav-first li .nav-first-icon-icon2 {
+  background-position: 0 -32px;
+}
+.nav-first li .nav-first-icon-icon3 {
+  background-position: 0 -64px;
+}
+.nav-first li .nav-first-icon-icon4 {
+  background-position: 0 -96px;
+}
+.nav-first li .nav-first-icon-icon5 {
+  background-position: 0 -128px;
+}
