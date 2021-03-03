@@ -8,6 +8,8 @@ body {
   background: #f2f2f2;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
+
+  height: 2000px;
 }
 ul {
   list-style: none;
@@ -85,7 +87,7 @@ div {
 .banner img {
   width: 100%;
 }
-/* 第一个导航栏 */
+/* 第一个小导航栏 */
 .nav-first {
   display: flex;
   height: 64px;
@@ -106,7 +108,7 @@ div {
   width: 32px;
   height: 32px;
   margin-top: 8px;
-  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background: url(../images/firstnav-bg.png) no-repeat 0 0;
   background-size: 32px auto;
 }
 .nav-first li .nav-first-icon-icon2 {
@@ -120,4 +122,102 @@ div {
 }
 .nav-first li .nav-first-icon-icon5 {
   background-position: 0 -128px;
+}
+/* 主导航栏 */
+nav {
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  text-align: center;
+}
+.nav-row {
+  display: flex;
+  height: 88px;
+}
+.nav-row:nth-child(1) {
+  background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+}
+.nav-row:nth-child(2) {
+  margin: 3px 0;
+  background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+}
+.nav-row:nth-child(3) {
+  background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.nav-item:first-child a {
+  background: url(../images/hotel.png) no-repeat bottom center;
+  background-size: 121px auto;
+}
+/* -n+2选的是前两个 */
+.nav-item:nth-child(-n + 2) {
+  border-right: 1px solid #fff;
+}
+.nav-item a {
+  flex: 1;
+  line-height: 44px;
+  color: #fff;
+  font-size: 14px;
+  /* 文字阴影 */
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
+.nav-item:nth-child(n + 2) a:first-child {
+  border-bottom: 1px solid #fff;
+}
+/* 第二个小导航栏 */
+.nav-second {
+  display: flex;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+.nav-second li {
+  /* 每个li占父盒子宽度的20% */
+  flex: 20%;
+}
+.nav-second li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.nav-second li [class^="nav-second-icon"] {
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  background: url(../images/secondnav-bg.png) no-repeat;
+  background-size: 28px auto;
+}
+.nav-second li .nav-second-icon-icon2 {
+  background-position: 0 -29px;
+}
+.nav-second li .nav-second-icon-icon3 {
+  background-position: 0 -65px;
+}
+.nav-second li .nav-second-icon-icon4 {
+  background-position: 0 -100px;
+}
+.nav-second li .nav-second-icon-icon5 {
+  background-position: 0 -132px;
+}
+.nav-second li .nav-second-icon-icon6 {
+  background-position: 4px -163px;
+}
+.nav-second li .nav-second-icon-icon7 {
+  background-position: -2px -198px;
+}
+.nav-second li .nav-second-icon-icon8 {
+  background-position: 0 -230px;
+}
+.nav-second li .nav-second-icon-icon9 {
+  background-position: 0 -259px;
+}
+.nav-second li .nav-second-icon-icon10 {
+  background-position: 3px -288px;
 }
