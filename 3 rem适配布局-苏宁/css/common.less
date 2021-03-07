@@ -1,0 +1,77 @@
+// 设置常见的屏幕尺寸 修改其HTML文字大小
+// 如果直接在PC端打开页面，直接把HTML设置为50px
+// 注意這句話寫到最上面（因为代码从上往下执行，如果写在最下面，不会执行到这行代码）
+html {
+  font-size: 50px;
+}
+// 把设备宽度划分为15等份
+@wno: 15;
+// 给宽度为320px的设备设置宽度
+@media screen and (min-width: 320px) {
+  html {
+    font-size: (320px / @wno);
+  }
+}
+// 给宽度为360px的设备设置宽度
+@media screen and (min-width: 360px) {
+  html {
+    font-size: (360px / @wno);
+  }
+}
+// 给宽度为375px的设备（iPhone6,7,8）设置宽度
+@media screen and (min-width: 375px) {
+  html {
+    font-size: (375px / @wno);
+  }
+}
+// 给宽度为384px的设备设置宽度
+@media screen and (min-width: 384px) {
+  html {
+    font-size: (384px / @wno);
+  }
+}
+// 给宽度为400px的设备设置宽度
+@media screen and (min-width: 400px) {
+  html {
+    font-size: (400px / @wno);
+  }
+}
+// 给宽度为414px的设备设置宽度
+@media screen and (min-width: 414px) {
+  html {
+    font-size: (414px / @wno);
+  }
+}
+// 给宽度为424px的设备设置宽度
+@media screen and (min-width: 424px) {
+  html {
+    font-size: (424px / @wno);
+  }
+}
+// 给宽度为480px的设备设置宽度
+@media screen and (min-width: 480px) {
+  html {
+    font-size: (480px / @wno);
+  }
+}
+// 给宽度为540px的设备设置宽度
+@media screen and (min-width: 540px) {
+  html {
+    font-size: (540px / @wno);
+  }
+}
+// 给宽度为720px的设备设置宽度
+@media screen and (min-width: 720px) {
+  html {
+    font-size: (720px / @wno);
+  }
+}
+// 给宽度为750px的设备设置宽度
+@media screen and (min-width: 750px) {
+  html {
+    font-size: (750px / @wno);
+  }
+}
+a {
+  text-decoration: none;
+}
