@@ -7,14 +7,41 @@ body {
   line-height: 1.5;
   font-family: Arial, Helvetica;
   background: #f2f2f2;
+
+  height: (3000rem / @baseFont);
 }
 @baseFont: 50;
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+// 清除浮动
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
 // 顶部搜索区域
 .search-wrap {
   display: flex;
   position: fixed;
   top: 0;
   left: 50%;
+  z-index: 10;
   transform: translateX(-50%);
   width: 15rem;
   height: (88rem / @baseFont);
@@ -89,6 +116,265 @@ nav {
     span {
       font-size: (25rem / @baseFont);
       color: #333;
+    }
+  }
+}
+// 礼物区域
+.gifts {
+  display: flex;
+  height: (234rem / @baseFont);
+  a:first-child {
+    flex: 2;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  a:nth-child(n + 2) {
+    flex: 1;
+    border-left: (2rem / @baseFont) solid #f2f2f2;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+// 热卖区域
+.hot-wrap {
+  margin-top: (24rem / @baseFont);
+}
+.hot-first,
+.hot-second {
+  display: flex;
+  width: (702rem / @baseFont);
+  height: (258rem / @baseFont);
+  margin: 0 auto;
+}
+.hot-item-l {
+  position: relative;
+  flex: 1;
+  background-color: #fff;
+  .count {
+    position: absolute;
+    top: (23rem / @baseFont);
+    right: (70rem / @baseFont);
+    font-size: (20rem / @baseFont);
+    span {
+      display: inline-block;
+      width: (34rem / @baseFont);
+      height: (28rem / @baseFont);
+      background-color: #ffcc00;
+      text-align: center;
+      border-radius: (10rem / @baseFont);
+    }
+  }
+}
+.hot-vertical-divider {
+  border-left: (1rem / @baseFont) solid #f2f2f2;
+}
+.hot-item-r {
+  flex: 1;
+  background-color: #fff;
+}
+.hot-title {
+  margin: (18rem / @baseFont) 0 0 (24rem / @baseFont);
+  color: #333;
+  font-size: (28rem / @baseFont);
+  font-weight: 700;
+}
+.hot-sub-title {
+  margin-left: (24rem / @baseFont);
+  font-size: (24rem / @baseFont);
+  color: #999;
+}
+.hot-item {
+  height: (149rem / @baseFont);
+  padding-left: (28rem / @baseFont);
+  display: flex;
+  li {
+    flex: 1;
+    text-align: center;
+    a {
+      position: relative;
+      display: block;
+      height: 100%;
+      img {
+        width: (120rem / @baseFont);
+        height: (120rem / @baseFont);
+        vertical-align: bottom;
+      }
+      .prices {
+        font-size: (22rem / @baseFont);
+        color: #ff5500;
+      }
+    }
+  }
+}
+.hot-product-tag {
+  position: absolute;
+  z-index: 5;
+  left: (5rem / @baseFont);
+  bottom: (-7rem / @baseFont);
+  width: (150rem / @baseFont);
+  height: (54rem / @baseFont);
+
+  background: url(../products/hot-product-tag.png) no-repeat;
+  background-size: (150rem / @baseFont) (54rem / @baseFont);
+  color: #333;
+  font-size: (20rem / @baseFont);
+  line-height: (76rem / @baseFont);
+}
+.hot-divider {
+  border-bottom: (1rem / @baseFont) solid #f2f2f2;
+}
+.hot-recommendations {
+  width: (702rem / @baseFont);
+  height: (172rem / @baseFont);
+  margin: 0 auto;
+  background-color: #fff;
+}
+.hot-recommendations-l {
+  float: left;
+  width: (173rem / @baseFont);
+  height: 100%;
+  padding: (47rem / @baseFont) (18rem / @baseFont) 0;
+  box-sizing: border-box;
+  text-align: center;
+  p:first-child {
+    font-size: (32rem / @baseFont);
+    color: #444;
+    font-weight: 700;
+  }
+  p:last-child {
+    font-size: (24rem / @baseFont);
+    color: #999;
+  }
+}
+.hot-recommendations-r {
+  display: flex;
+  float: left;
+  width: (508rem / @baseFont);
+  height: 100%;
+  li {
+    flex: 1;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: (100rem / @baseFont);
+      height: (100rem / @baseFont);
+    }
+    p {
+      font-size: (22rem / @baseFont);
+      color: #333;
+    }
+  }
+}
+.recommendations {
+  width: (750rem / @baseFont);
+}
+.recommendations-title {
+  height: (60rem / @baseFont);
+  img {
+    width: (750rem / @baseFont);
+    height: (60rem / @baseFont);
+  }
+}
+.recommendations-list-one {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 (17rem / @baseFont);
+  box-sizing: border-box;
+}
+.recommendations-list-one-item {
+  position: relative;
+  width: (226rem / @baseFont);
+  height: (266rem / @baseFont);
+  text-align: center;
+  background-color: #fff;
+  border-radius: (15rem / @baseFont);
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    display: block;
+    width: (150rem / @baseFont);
+    height: (150rem / @baseFont);
+    margin: (15rem / @baseFont) (38em / @baseFont) 0;
+  }
+}
+.recommendations-list-one-item-desc {
+  position: absolute;
+  bottom: 0;
+  width: (226rem / @baseFont);
+  height: (93rem / @baseFont);
+  box-sizing: border-box;
+  padding-top: (13rem / @baseFont);
+  background: url(../products/recommendations-list-one1.png) no-repeat;
+  background-size: (226rem / @baseFont) (93rem / @baseFont);
+  p:first-child {
+    position: absolute;
+    top: (-20rem / @baseFont);
+    left: 50%;
+    transform: translateX(-50%);
+    width: (100rem / @baseFont);
+    height: (34rem / @baseFont);
+    background-color: #fff;
+    color: #d9a87a;
+    font-size: (22rem / @baseFont);
+    border: (1rem / @baseFont) solid #d9a87a;
+    border-radius: (17rem / @baseFont);
+  }
+  p:nth-child(2) {
+    color: #fff;
+    font-size: (26rem / @baseFont);
+  }
+  p:nth-child(3) {
+    color: #fff;
+    font-size: (22rem / @baseFont);
+    opacity: 0.8;
+  }
+}
+.recommendations-list-one-item-desc-mid-bak {
+  background: url(../products/recommendations-list-one3.png) no-repeat;
+}
+// 因为footer区域是fixed的状态，避免footer遮挡其它盒子，所以留出footer区域
+.footer-padding {
+  height: (101rem / @baseFont);
+  margin-top: (10rem / @baseFont);
+}
+// footer区域
+footer {
+  display: flex;
+  position: fixed;
+  // left: 50%;
+  // transform: translateX(-50%);
+  bottom: 0;
+  width: 15rem;
+  height: (101rem / @baseFont);
+  background-color: #fff;
+  a {
+    flex: 1;
+    height: 100%;
+    color: #000;
+    text-align: center;
+    img {
+      width: (48rem / @baseFont);
+      height: (48rem / @baseFont);
+      margin-top: (12rem / @baseFont);
+    }
+    span {
+      display: block;
+      margin-top: (-20rem / @baseFont);
+      font-weight: bold;
+      font-size: (20rem / @baseFont);
     }
   }
 }
