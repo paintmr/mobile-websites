@@ -7,8 +7,6 @@ body {
   line-height: 1.5;
   font-family: Arial, Helvetica;
   background: #f2f2f2;
-
-  height: (3000rem / @baseFont);
 }
 @baseFont: 50;
 p,
@@ -34,7 +32,14 @@ li {
 .clearfix {
   *zoom: 1;
 }
-
+// 分隔竖线
+.vertical-divider {
+  border-left: (1rem / @baseFont) solid #f2f2f2;
+}
+// 分隔横线
+.horizontal-divider {
+  border-bottom: (1rem / @baseFont) solid #f2f2f2;
+}
 // 顶部搜索区域
 .search-wrap {
   display: flex;
@@ -169,9 +174,6 @@ nav {
     }
   }
 }
-.hot-vertical-divider {
-  border-left: (1rem / @baseFont) solid #f2f2f2;
-}
 .hot-item-r {
   flex: 1;
   background-color: #fff;
@@ -223,9 +225,6 @@ nav {
   color: #333;
   font-size: (20rem / @baseFont);
   line-height: (76rem / @baseFont);
-}
-.hot-divider {
-  border-bottom: (1rem / @baseFont) solid #f2f2f2;
 }
 .hot-recommendations {
   width: (702rem / @baseFont);
@@ -344,6 +343,166 @@ nav {
 }
 .recommendations-list-one-item-desc-mid-bak {
   background: url(../products/recommendations-list-one3.png) no-repeat;
+}
+.recommendations-list-two {
+  width: (702rem / @baseFont);
+  margin: (10rem / @baseFont) auto;
+  border-radius: (15rem / @baseFont);
+  overflow: hidden;
+}
+.recommendations-list-two-row {
+  display: flex;
+  width: (702rem / @baseFont);
+}
+.recommendations-item {
+  flex: 1;
+  width: (350rem / @baseFont);
+  height: (240rem / @baseFont);
+  padding: (21rem / @baseFont) 0 (16rem / @baseFont) (18rem / @baseFont);
+  background-color: #fff;
+  box-sizing: border-box;
+  div:first-child {
+    a:first-child {
+      float: left;
+      font-size: (26rem / @baseFont);
+      color: #333;
+      font-weight: 700;
+    }
+    a:last-child {
+      float: left;
+      width: (66rem / @baseFont);
+      height: (28rem / @baseFont);
+      margin: (5rem / @baseFont) 0 0 (12rem / @baseFont);
+      padding: 0 (12rem / @baseFont);
+      background-color: #f9f5ee;
+      font-size: (22rem / @baseFont);
+      line-height: (28rem / @baseFont);
+      color: #ab813a;
+      border-radius: (15rem / @baseFont);
+    }
+  }
+  p {
+    font-size: (24rem / @baseFont);
+    color: #999;
+  }
+  div:last-child {
+    display: flex;
+    a {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      // align-items: center;
+      img {
+        width: (140rem / @baseFont);
+        height: (140rem / @baseFont);
+      }
+    }
+  }
+}
+// 大空行
+.big-blank {
+  height: (24rem / @baseFont);
+}
+// 猜你喜欢
+.customer-preferences {
+  width: (702rem / @baseFont);
+  margin: 0 auto;
+}
+.customer-preferences-title {
+  width: (702rem / @baseFont);
+  height: (60rem / @baseFont);
+  background: url(../images/customer-preferences.webp) no-repeat;
+  background-size: (702rem / @baseFont) (60rem / @baseFont);
+}
+.customer-preferences-list {
+  display: flex;
+  justify-content: space-between;
+  width: (702rem / @baseFont);
+  margin: 0 auto;
+  ul {
+    width: (342rem / @baseFont);
+    border-radius: (15rem / @baseFont);
+    overflow: hidden;
+  }
+}
+.customer-preferences-item {
+  width: (342rem / @baseFont);
+  margin-bottom: (18rem / @baseFont);
+  background-color: #fff;
+  img {
+    width: (342rem / @baseFont);
+    height: (342rem / @baseFont);
+    vertical-align: middle;
+  }
+  p:nth-child(2) {
+    width: (318rem / @baseFont);
+    height: (67rem / @baseFont);
+    margin: (18rem / @baseFont) (12rem / @baseFont) 0;
+    color: #333;
+    font-size: (25rem / @baseFont);
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  p:nth-child(3) {
+    height: (59rem / @baseFont);
+    padding: (11rem / @baseFont) (12rem / @baseFont) (24rem / @baseFont);
+    box-sizing: border-box;
+  }
+  div:nth-child(4) {
+    height: (38rem / @baseFont);
+    padding-left: (12rem / @baseFont);
+    span:first-child {
+      float: left;
+      color: #f42;
+      font-size: (24rem / @baseFont);
+    }
+    span:nth-child(2) {
+      float: left;
+      margin: (-13rem / @baseFont) (13rem / @baseFont) 0 0;
+      color: #f42;
+      font-size: (36rem / @baseFont);
+      font-weight: 700;
+    }
+    span:nth-child(3) {
+      float: left;
+      color: #999;
+      font-size: (20rem / @baseFont);
+    }
+  }
+}
+.tag-sn-managing {
+  float: left;
+  width: (48rem / @baseFont);
+  height: (24rem / @baseFont);
+  margin-right: (5rem / @baseFont);
+  background: url(../images/customer-preferences2.png) no-repeat;
+  background-size: (48rem / @baseFont) (24rem / @baseFont);
+}
+.tag {
+  float: left;
+  height: (24rem / @baseFont);
+  margin: 0 (2rem / @baseFont) 0 (3rem / @baseFont);
+  text-align: center;
+  color: #333;
+  font-size: (18rem / @baseFont);
+  line-height: (22rem / @baseFont);
+  box-sizing: border-box;
+  border: 1px solid #ffbb00;
+  background: #fefbee;
+  border-radius: (5rem / @baseFont);
+}
+.tag-group-buying {
+  width: (62rem / @baseFont);
+}
+.tag-steep-discounts {
+  width: (80rem / @baseFont);
+}
+.tag-coupon {
+  width: (118.06rem / @baseFont);
 }
 // 因为footer区域是fixed的状态，避免footer遮挡其它盒子，所以留出footer区域
 .footer-padding {

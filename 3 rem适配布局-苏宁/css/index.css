@@ -66,7 +66,6 @@ body {
   line-height: 1.5;
   font-family: Arial, Helvetica;
   background: #f2f2f2;
-  height: 60rem;
 }
 p,
 ul,
@@ -89,6 +88,12 @@ li {
 }
 .clearfix {
   *zoom: 1;
+}
+.vertical-divider {
+  border-left: 0.02rem solid #f2f2f2;
+}
+.horizontal-divider {
+  border-bottom: 0.02rem solid #f2f2f2;
 }
 .search-wrap {
   display: flex;
@@ -215,9 +220,6 @@ nav a span {
   text-align: center;
   border-radius: 0.2rem;
 }
-.hot-vertical-divider {
-  border-left: 0.02rem solid #f2f2f2;
-}
 .hot-item-r {
   flex: 1;
   background-color: #fff;
@@ -268,9 +270,6 @@ nav a span {
   color: #333;
   font-size: 0.4rem;
   line-height: 1.52rem;
-}
-.hot-divider {
-  border-bottom: 0.02rem solid #f2f2f2;
 }
 .hot-recommendations {
   width: 14.04rem;
@@ -389,6 +388,161 @@ nav a span {
 }
 .recommendations-list-one-item-desc-mid-bak {
   background: url(../products/recommendations-list-one3.png) no-repeat;
+}
+.recommendations-list-two {
+  width: 14.04rem;
+  margin: 0.2rem auto;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.recommendations-list-two-row {
+  display: flex;
+  width: 14.04rem;
+}
+.recommendations-item {
+  flex: 1;
+  width: 7rem;
+  height: 4.8rem;
+  padding: 0.42rem 0 0.32rem 0.36rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.recommendations-item div:first-child a:first-child {
+  float: left;
+  font-size: 0.52rem;
+  color: #333;
+  font-weight: 700;
+}
+.recommendations-item div:first-child a:last-child {
+  float: left;
+  width: 1.32rem;
+  height: 0.56rem;
+  margin: 0.1rem 0 0 0.24rem;
+  padding: 0 0.24rem;
+  background-color: #f9f5ee;
+  font-size: 0.44rem;
+  line-height: 0.56rem;
+  color: #ab813a;
+  border-radius: 0.3rem;
+}
+.recommendations-item p {
+  font-size: 0.48rem;
+  color: #999;
+}
+.recommendations-item div:last-child {
+  display: flex;
+}
+.recommendations-item div:last-child a {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.recommendations-item div:last-child a img {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.big-blank {
+  height: 0.48rem;
+}
+.customer-preferences {
+  width: 14.04rem;
+  margin: 0 auto;
+}
+.customer-preferences-title {
+  width: 14.04rem;
+  height: 1.2rem;
+  background: url(../images/customer-preferences.webp) no-repeat;
+  background-size: 14.04rem 1.2rem;
+}
+.customer-preferences-list {
+  display: flex;
+  justify-content: space-between;
+  width: 14.04rem;
+  margin: 0 auto;
+}
+.customer-preferences-list ul {
+  width: 6.84rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.customer-preferences-item {
+  width: 6.84rem;
+  margin-bottom: 0.36rem;
+  background-color: #fff;
+}
+.customer-preferences-item img {
+  width: 6.84rem;
+  height: 6.84rem;
+  vertical-align: middle;
+}
+.customer-preferences-item p:nth-child(2) {
+  width: 6.36rem;
+  height: 1.34rem;
+  margin: 0.36rem 0.24rem 0;
+  color: #333;
+  font-size: 0.5rem;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.customer-preferences-item p:nth-child(3) {
+  height: 1.18rem;
+  padding: 0.22rem 0.24rem 0.48rem;
+  box-sizing: border-box;
+}
+.customer-preferences-item div:nth-child(4) {
+  height: 0.76rem;
+  padding-left: 0.24rem;
+}
+.customer-preferences-item div:nth-child(4) span:first-child {
+  float: left;
+  color: #f42;
+  font-size: 0.48rem;
+}
+.customer-preferences-item div:nth-child(4) span:nth-child(2) {
+  float: left;
+  margin: -0.26rem 0.26rem 0 0;
+  color: #f42;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.customer-preferences-item div:nth-child(4) span:nth-child(3) {
+  float: left;
+  color: #999;
+  font-size: 0.4rem;
+}
+.tag-sn-managing {
+  float: left;
+  width: 0.96rem;
+  height: 0.48rem;
+  margin-right: 0.1rem;
+  background: url(../images/customer-preferences2.png) no-repeat;
+  background-size: 0.96rem 0.48rem;
+}
+.tag {
+  float: left;
+  height: 0.48rem;
+  margin: 0 0.04rem 0 0.06rem;
+  text-align: center;
+  color: #333;
+  font-size: 0.36rem;
+  line-height: 0.44rem;
+  box-sizing: border-box;
+  border: 1px solid #ffbb00;
+  background: #fefbee;
+  border-radius: 0.1rem;
+}
+.tag-group-buying {
+  width: 1.24rem;
+}
+.tag-steep-discounts {
+  width: 1.6rem;
+}
+.tag-coupon {
+  width: 2.3612rem;
 }
 .footer-padding {
   height: 2.02rem;
