@@ -155,7 +155,12 @@ header h1 a {
   }
   .main-body h2{
     height: 42px;
-   margin: 16px 0 8px 0;
+    margin: 16px 0 8px 0;
+    font-size:30px;
+  }
+  .main-body p{
+    font-size:16px;
+    color:#a5a5a5;
   }
   .main-body div {
     border-bottom: 1px solid #ededef;
