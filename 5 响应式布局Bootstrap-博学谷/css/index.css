@@ -1,5 +1,6 @@
 ul {
   list-style-type: none;
+  padding: 0;
 }
 header {
   height: 112px;
@@ -32,9 +33,143 @@ header h1 a {
   font-weight: 700;
 }
 .banner {
-  /* width: 100%; */
   height: 578px;
   background: url(../images/banner-qzns.jpg) no-repeat;
   background-position: center center;
-  /* overflow: hidden; */
+}
+.main{
+  margin-top: 95px;
+  text-align: center;
+}
+.main-title {
+  height: 69px;
+}
+.main-title h2{
+  margin:0 0 10px 0;
+  font-weight:700;
+}
+.main-body{
+  height: 350px;
+  padding: 0;
+}
+.main-body li{
+  float: left;
+  width: 33.33%;
+  height: 350px;
+}
+.main-body li a{
+  text-decoration: none;
+}
+.main-body img{
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+}
+.main-body h2 {
+  color:#333;
+}
+.main-body p{
+  height: 22px;
+  margin: 8px 0 24px 0;
+  line-height: 22px;
+  font-size:16px;
+  color:#b4b4b4;
+}
+.main-body div {
+  height: 32px;
+  margin: 0 50px;
+  padding-top: 32px;
+  line-height: 32px;
+  font-size:16px;
+  color:#333;
+  border-top: 1px solid #ededef;
+}
+.more{
+  display: block;
+  margin: 64px 0;
+  font-size:20px;
+  color:#54bcb2;
+  font-size:20px;
+}
+.more span{
+  margin-left: 5px;
+}
+/* mid screen, width 970px */
+@media screen and (max-width:1199px){
+  .banner{
+    height: 450px;
+  }
+  .main{
+    margin-top: 60px;
+  }
+}
+/* small screen，width 750px */
+@media screen and (max-width:991px){
+  .header-nav li a {
+    margin-right: 30px;
+  }  
+  .banner{
+    height: 330px;
+  }
+}
+/* extra small screen, width 100% */
+@media screen and (max-width:767px){
+  header {
+    position: relative;
+    height: 56px;
+    line-height: 56px;
+  }
+  .header-nav{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header-nav li a {
+    margin-right: 15px;
+  }
+  .banner{
+    height: 251px;
+  }
+  .main{
+    margin-top: 32px;
+  }
+  .main-title {
+    height: 54px;
+  }
+  .main-title h2{
+    font-size:24px;
+  }
+  .main-title p{
+    font-size:12px;
+  }
+  .main-body{
+    height: 270px;
+    margin-top: 64px;
+    padding: 0;
+  }
+  .main-body li{
+    width: 100%;
+  }
+  .main-body img{
+    margin: 0px;
+  }
+  .main-body h2{
+    height: 42px;
+   margin: 16px 0 8px 0;
+  }
+  .main-body div {
+    border-bottom: 1px solid #ededef;
+  }
+}
+@media screen and (max-width:680px){
+  header{
+    height: 140px;
+    padding-top: 8px;
+  }
+  .header-nav li{
+    float:none;
+    margin-top: 7px;
+    height: 17px;
+    line-height: 17px;
+  }
 }
