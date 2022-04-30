@@ -48,7 +48,8 @@
 
     <!-- Image Slider -->
     <div class="container">
-      <div class="row">
+      <div class="row margin-b">
+        <!-- data-ride="carousel" 自动播放轮播图 -->
         <div id="slides" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -60,21 +61,31 @@
             <div class="carousel-item active">
               <img src="./img/background.png" class="d-block w-100" alt="..." />
               <div class="carousel-caption">
-                <!-- md及以上的screen显示 -->
-                <h1 class="display-2 d-none d-md-block">Light In Code</h1>
-                <!-- extra sm和sm显示 -->
-                <h1 class="display-4 d-block d-md-none">Light In Code</h1>
+                <h1 class="display-3">Light in Coding</h1>
                 <h3>Technology Fantasy</h3>
+                <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
+                <button type="button" class="btn btn-primary btn-lg purple">GET STARTED</button>
+
+                <!-- 下面的写法太繁琐。只写1次html盒子，其余的用css媒体查询来改 -->
+                <!-- lg及以上的screen显示 -->
+                <!-- <h1 class="display-3 d-none d-lg-block">LIGHT IN CODING</h1> -->
+                <!-- md显示 -->
+                <!-- <h2 class="display-4 d-none d-md-block d-lg-none">LIGHT IN CODING</h2> -->
+                <!-- sm显示 -->
+                <!-- <h1 class="d-none d-sm-block d-md-none">LIGHT IN CODING</h1> -->
+                <!-- extra sm显示 -->
+                <!-- <h1 class="d-block d-sm-none">LIGHT IN CODING</h1> -->
+                <!-- <h3>Technology Fantasy</h3> -->
                 <!-- md及以上的screen显示 -->
-                <div class="d-none d-md-block">
+                <!-- <div class="d-none d-md-block">
                   <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
-                  <button type="button" class="btn btn-primary btn-lg">VIEW DEMO</button>
-                </div>
+                  <button type="button" class="btn btn-primary btn-lg purple">GET STARTED</button>
+                </div> -->
                 <!-- md及以上的screen都隐藏 -->
-                <div class="d-md-none">
+                <!-- <div class="d-md-none">
                   <button type="button" class="btn btn-outline-light btn-sm">VIEW DEMO</button>
-                  <button type="button" class="btn btn-primary btn-sm">VIEW DEMO</button>
-                </div>
+                  <button type="button" class="btn btn-primary btn-sm purple">GET STARTED</button>
+                </div> -->
               </div>
             </div>
             <div class="carousel-item">
@@ -100,17 +111,18 @@
       </div>
 
       <!-- Welcome Section -->
-      <div class="row text-center">
+      <div class="row text-center margin-b2">
         <div class="col-12">
-          <h1 class="display-4">Built with ease.</h1>
+          <h1 class="display-4 bt-resp">Built with ease.</h1>
         </div>
+        <hr class="built-with-ease" />
         <div class="col-12">
           <p class="lead">Welcome to my Bootstrap 4 website tutorial! Bootstrap is a free and open-source front-end library with HTML and CSS based designs.</p>
         </div>
       </div>
 
       <!-- Three Column Section -->
-      <div class="row text-center">
+      <div class="row text-center margin-b">
         <div class="col-12 col-sm-6 col-md-4">
           <i class="fas fa-code"></i>
           <h3>HTML5</h3>
@@ -127,10 +139,10 @@
           <p>Built with the latest version of CSS, CSS 3</p>
         </div>
       </div>
-      <hr />
+      <hr class="margin-b" />
 
       <!-- Two Column Section -->
-      <div class="row">
+      <div class="row margin-b">
         <div class="col-md-12 col-lg-6">
           <h2>If you build it...</h2>
           <p>The columns will automatically stack on top of each other when the screen is less than 576px wide.</p>
@@ -147,22 +159,151 @@
 
       <hr />
       <!-- Fixed background -->
-      <figure>
-        <div class="fixed-wrap">
-          <div id="fixed"></div>
-        </div>
-      </figure>
-      <!-- Emoji Section -->
+      <div class="margin-b" id="fixed-pic"></div>
 
       <!-- Meet the team -->
+      <div class="row text-center">
+        <div class="col-12">
+          <h1 class="display-4">Meet the Team</h1>
+        </div>
+        <hr />
+      </div>
 
       <!-- Cards -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/team1.png" alt="team1" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">John Doe</h5>
+              <p class="card-text">Joe is an Internet entrepreneur with almost 20 years of experience.</p>
+              <a href="#" class="btn btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/team2.png" alt="team2" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">Mary Jo</h5>
+              <p class="card-text">Mary is a designer with almost 10 years of digital design experience.</p>
+              <a href="#" class="btn btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <img src="./img/team3.png" alt="team3" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">Phil Ho</h5>
+              <p class="card-text">Phill is a developer with over 5 years of web development experience.</p>
+              <a href="#" class="btn btn-outline-secondary">See Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ways of Communication Section -->
+      <div class="ways-of-com margin-b">
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#way-of-com">Click To Show Ways Of Communication</button>
+        <i class="fa-solid fa-circle-arrow-left"></i>
+        <div id="way-of-com" class="collapse">
+          <div class="row text-center">
+            <div class="col-sm-6 col-md-3">
+              <img src="./img/gif/zoom.gif" class="img-fluid" alt="dog1" />
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="./img/gif/email.gif" class="img-fluid" alt="dog2" />
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="./img/gif/mobile.gif" class="img-fluid" alt="dog3" />
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <img src="./img/gif/meeting.gif" class="img-fluid" alt="dog4" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="margin-b" />
 
       <!-- Two Column Section -->
+      <div class="row margin-b">
+        <div class="col-md-12 col-lg-6">
+          <h2>Our Philosophy</h2>
+          <p>We know that greatness in a disruptive era requires bold ambition, curious talent and a culture that believes we're smarter together.</p>
+          <p>Resize the browser window to see the effect. Responsive web design has become more important as the amount of mobile traffic now accounts for more than half of total internet traffic.</p>
+          <p>It can also display the web page differently depending on the screen size or viewing device.</p>
+          <br />
+        </div>
+        <div class="col-lg-6">
+          <!-- class="img-fluid" 图片响应式 -->
+          <img src="img/bootstrap2.png" class="img-fluid" />
+        </div>
+      </div>
+
+      <hr class="margin-b" />
 
       <!-- Connect -->
+      <div class="row text-center margin-b2">
+        <div class="col-12">
+          <h2>Connect</h2>
+        </div>
+
+        <div class="col-12 social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="img/w3newbie.png" alt="logo" />
+            <hr class="light" />
+            <p>555-555-5555</p>
+            <p>email@myemail.com</p>
+            <p>100 Street Name</p>
+            <p>City, State, 00000</p>
+          </div>
+
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>Our hours</h5>
+            <hr class="light" />
+            <p>Monday: 9am - 5pm</p>
+            <p>Saturday: 10am - 4pm</p>
+            <p>Sunday: closed</p>
+          </div>
+
+          <div class="col-md-4">
+            <hr class="light" />
+            <h5>Service Area</h5>
+            <hr class="light" />
+            <p>City, State, 00000</p>
+            <p>City, State, 00000</p>
+            <p>City, State, 00000</p>
+            <p>City, State, 00000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-12">
+            <hr class="light-end" />
+            <h5>&copy;w3newbie.com</h5>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
