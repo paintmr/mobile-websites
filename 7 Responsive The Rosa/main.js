@@ -26,7 +26,7 @@ menuToggler.addEventListener('click', function () {
 
   }
 
-  // 原本导师代码只有这一行。如果这样写，否则屏幕小于900的时候，nav-list导航栏会显示再隐藏，影响用户体验。
+  // 原本导师代码只有这一行。如果这样写，屏幕小于900的时候，nav-list导航栏会显示再隐藏，影响用户体验。
   // body.classList.toggle('open');
 
 })
