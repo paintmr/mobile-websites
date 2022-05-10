@@ -14,8 +14,10 @@
 
     <!-- my CSS -->
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile-style.css" />
 
     <title>Books</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Header begins. -->
@@ -92,7 +94,7 @@
                 <img src="./assets/pexels-photo-1904769.jpeg" alt="pray" />
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 pray-desc">
               <div class="panel text-left">
                 <h1>Mr. David Smith</h1>
                 <!-- pt- adds padding-top -->
@@ -194,36 +196,38 @@
       <!-- Section-2 ends. -->
 
       <!-- Section-3 begins. -->
-      <section class="section-3 container-fluid p-0 text-center">
-        <div class="row">
-          <div class="col-12">
-            <h1>Download Our App For All Platforms</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipiscicing elit. Eum exercitationem alias perspiciatis omnis quod possimus odit voluptatum! Sunt ea quasi praesentium, tenetur doloribus animi obcaecati, sint nemo quae laudantium iusto unde eaque nostrum nobis voluptatum.</p>
-          </div>
-        </div>
-        <div class="platform row">
-          <div class="col-md-6 text-right">
-            <div class="desktop shadow-lg">
-              <div class="d-flex flex-row justify-content-center">
-                <!-- fa-3x enlarges the icon -->
-                <i class="fa-solid fa-desktop fa-3x py-2 pr-3"></i>
-                <div class="text text-left">
-                  <h3 class="pt-1 m-0">Desktop</h3>
-                  <p class="p-0 m-0">On Website</p>
-                </div>
-              </div>
+      <section class="section-3 container-fluid text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>Download Our App For All Platforms</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipiscicing elit. Eum exercitationem alias perspiciatis omnis quod possimus odit voluptatum! Sunt ea quasi praesentium, tenetur doloribus animi obcaecati, sint nemo quae laudantium iusto unde eaque nostrum nobis voluptatum.</p>
             </div>
           </div>
-          <div class="col-md-6 text-left">
-            <div class="desktop shadow-lg">
-              <div class="d-flex flex-row justify-content-center">
-                <!-- fa-3x enlarges the icon -->
-                <i class="fa-solid fa-mobile-screen-button fa-3x py-2 pr-3"></i>
-                <div class="text text-left">
-                  <h3 class="pt-1 m-0">On Mobile</h3>
-                  <p class="p-0 m-0">On Play Store</p>
+          <div class="platform row">
+            <div class="col-md-6 text-right">
+              <a class="desktop shadow-lg" href="#">
+                <div class="d-flex flex-row justify-content-center">
+                  <!-- fa-3x enlarges the icon -->
+                  <i class="fa-solid fa-desktop fa-3x py-2 pr-3"></i>
+                  <div class="text text-left">
+                    <h3 class="pt-1 m-0">Desktop</h3>
+                    <p class="p-0 m-0">On Website</p>
+                  </div>
                 </div>
-              </div>
+              </a>
+            </div>
+            <div class="col-md-6 text-left">
+              <a class="desktop shadow-lg" href="#">
+                <div class="d-flex flex-row justify-content-center">
+                  <!-- fa-3x enlarges the icon -->
+                  <i class="fa-solid fa-mobile-screen-button fa-3x py-2 pr-3"></i>
+                  <div class="text text-left">
+                    <h3 class="pt-1 m-0">On Mobile</h3>
+                    <p class="p-0 m-0">On Play Store</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -232,70 +236,53 @@
 
       <!-- Section-4 begins. -->
       <senction class="section-4">
-        <div class="container text-center">
+        <div class="container text-center reader-feadback">
           <h1 class="text-dark">What Our Readers Say About Us</h1>
           <p class="text-secondary">Lorem ipsum dolor sit amet.</p>
         </div>
-        <div class="team row">
-          <div class="col-md-4 text-center">
+        <div class="container">
+          <div class="team row">
             <!-- Card 1 begins. -->
-            <div class="card mr-2 d-inline-block shadow-lg">
-              <img class="card-img-top" src="./assets/UI-face-3.jpg" alt="UI-face-3" />
-              <div class="card-body">
-                <h3 class="card-title">Blalock Jolene</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
-                <a href="#" class="text-secondary text-decoration-none">Go Somewhere</a>
-                <p class="text-black-50">CEO at Google</p>
+            <div class="col-md-4">
+              <div class="text-center card d-inline-block shadow-lg">
+                <img class="card-img-top border-radius p-4" src="./assets/UI-face-6.png" alt="UI-face-6.png" />
+                <div class="card-body">
+                  <h3 class="card-title">Blalock Jolene</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
+                  <p class="text-black-50">CEO at Google</p>
+                  <a href="#" class="text-secondary text-decoration-none">More Information</a>
+                </div>
               </div>
             </div>
             <!-- Card 1 ends. -->
-          </div>
-          <div class="col-md-4">
-            <!-- Carousel begins. -->
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active text-center">
-                  <!-- Card 2 begins. -->
-                  <div class="card mr-2 d-inline-block shadow-lg">
-                    <img class="card-img-top" src="./assets/UI-face-1.jpg" alt="UI-face-1" />
-                    <div class="card-body">
-                      <h3 class="card-title">Allen Agnes</h3>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
-                      <a href="#" class="text-secondary text-decoration-none">Go Somewhere</a>
-                      <p class="text-black-50">CEO at Google</p>
-                    </div>
-                  </div>
-                  <!-- Card 2 ends. -->
-                </div>
-                <div class="carousel-item text-center">
-                  <!-- Card 3 begins. -->
-                  <div class="card mr-2 d-inline-block shadow-lg">
-                    <img class="card-img-top" src="./assets/UI-face-2.jpg" alt="UI-face-2" />
-                    <div class="card-body">
-                      <h3 class="card-title">AAmiel Barbara</h3>
-                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
-                      <a href="#" class="text-secondary text-decoration-none">Go Somewhere</a>
-                      <p class="text-black-50">CEO at Google</p>
-                    </div>
-                  </div>
-                  <!-- Card 3 ends. -->
+
+            <!-- Card 2 begins. -->
+            <div class="col-md-4">
+              <div class="text-center card d-inline-block shadow-lg">
+                <img class="card-img-top border-radius p-4" src="./assets/UI-face-4.jpg" alt="UI-face-4" />
+                <div class="card-body">
+                  <h3 class="card-title">Olivia Louis</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
+                  <p class="text-black-50">CEO at Google</p>
+                  <a href="#" class="text-secondary text-decoration-none">More Information</a>
                 </div>
               </div>
             </div>
-            <!-- Carousel ends. -->
-          </div>
-          <div class="col-md-4 text-center">
-            <!-- Card 4 begins. -->
-            <div class="card mr-2 d-inline-block shadow-lg">
-              <img class="card-img-top" src="./assets/UI-face-4.jpg" alt="UI-face-4" />
-              <div class="card-body">
-                <h3 class="card-title">Olivia Louis</h3>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
-                <a href="#" class="text-secondary text-decoration-none">Go Somewhere</a>
-                <p class="text-black-50">CEO at Google</p>
+            <!-- Card 2 ends. -->
+
+            <!-- Card 3 begins. -->
+            <div class="col-md-4">
+              <div class="text-center card d-inline-block shadow-lg">
+                <img class="card-img-top border-radius p-4" src="./assets/UI-face-3.jpg" alt="UI-face-3.jpg" />
+                <div class="card-body">
+                  <h3 class="card-title">Olivia Louis</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisiciing elit. Sint iure autem recusandae, veiam, illo dolor soluta assumenda minima quia velit officia sit exercitationem nam ipsa, repellendus aut facilis quasi voluptas!</p>
+                  <p class="text-black-50">CEO at Google</p>
+                  <a href="#" class="text-secondary text-decoration-none">More Information</a>
+                </div>
               </div>
             </div>
-            <!-- Card 4 ends. -->
+            <!-- Card 3 ends. -->
           </div>
         </div>
       </senction>
@@ -305,39 +292,40 @@
 
     <!-- Footer begins. -->
     <footer>
-      <div class="container-fluid p-0">
+      <div class="container">
         <div class="row text-left">
-          <div class="col-md-5">
-            <h1 class="text-light">About us</h1>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Earum maxime ea similique illum corrupti.</p>
-            <p class="pt-4 text-muted">Copyright &copy;2022 All rights reserved | This template is made by <span>SL Coding</span>.</p>
+          <div class="col-lg-5 about-us">
+            <h4 class="text-light">About us</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum maxime ea similique illum corrupti.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-lg-4">
             <h4 class="text-light">Newsletter</h4>
             <p class="text-muted">Stay Updated</p>
-            <form class="form-inline">
-              <div class="col pl-0">
-                <div class="input-group pr-5">
-                  <input type="text" class="form-control bg-dark text-white" placeholder="Email" />
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <i class="fa-solid fa-arrow-right"></i>
-                    </div>
+            <form class="email-form">
+              <div class="input-group pr-5">
+                <input type="text" class="form-control bg-dark text-white" placeholder="Email" />
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa-solid fa-arrow-right"></i>
                   </div>
                 </div>
               </div>
             </form>
           </div>
-          <div class="col-md-2">
-            <h4 class="text-light">Follow Us</h4>
+          <div class="col-lg-3">
+            <h4 class="text-light">Follow us</h4>
             <p class="text-muted">Let us be social</p>
-            <div class="colum">
+            <div class="column">
               <i class="fa-brands fa-facebook"></i>
               <i class="fa-brands fa-instagram"></i>
               <i class="fa-brands fa-twitter"></i>
               <i class="fa-brands fa-youtube"></i>
             </div>
           </div>
+        </div>
+        <div class="copy-right">
+          <p class="pt-4 text-muted">Copyright &copy;2022 All rights reserved</p>
+          <p class="text-muted"">This template is made by <span>SLCoding</span>.</p>
         </div>
       </div>
     </footer>
