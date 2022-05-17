@@ -19,7 +19,7 @@ body {
 
 header,
 section {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 :root {
@@ -146,6 +146,14 @@ header .row .col-md-5 img {
   width: 90%;
 }
 
+header .book-pic {
+  transition: all 0.5s;
+}
+
+header .book-pic:hover {
+  transform: rotate(360deg);
+}
+
 /* Header banner ends. */
 header {
   padding-bottom: 25vmin;
@@ -204,6 +212,14 @@ header {
 .section-1 .row .col-md-6 .panel p {
   font-size: 0.9em;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.pray-desc .panel {
+  transition: all 0.3s;
+}
+
+.pray-desc .panel:hover {
+  transform: translate(-3px, -3px);
 }
 /* Section-1 ends. */
 
@@ -378,6 +394,10 @@ header {
 .border-radius {
   border-radius: 340px;
   width: 60%;
+}
+
+.section-4-overflow {
+  overflow: hidden;
 }
 
 /* Section-4 ends. */
